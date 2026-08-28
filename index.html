@@ -865,15 +865,7 @@ footer{background:var(--navy-deep); color:#8C96B5; padding:56px 0 28px;}
   setInterval(suppressGoogleBar, 300);
   window.addEventListener('load', suppressGoogleBar);
 
-  // Re-apply the visitor's previously chosen language once Google Translate has loaded
-  window.addEventListener('load', function(){
-    var saved = localStorage.getItem('jiexLang');
-    if(saved && saved !== 'en'){
-      var match = LANGUAGES.filter(function(l){ return l.code === saved; })[0];
-      if(match) btnLabel.textContent = match.name.split(' — ')[0];
-      applyGoogleTranslate(saved);
-    }
-  });
+
 })();
 </script>
 
