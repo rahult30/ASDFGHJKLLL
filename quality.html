@@ -131,180 +131,7 @@ iframe.skiptranslate{
 font[style]{background-color:transparent !important; box-shadow:none !important;}
 body{background-color:var(--paper) !important;}
 
-/* ---------- CUSTOM GALLERY DISPLAY ---------- */
-.gallery-section-head{
-  padding:60px 0 20px;
-}
-.gallery-section-head h1{
-  font-size:clamp(32px, 4vw, 46px);
-  color:var(--navy);
-  margin-bottom:12px;
-}
-.gallery-section-head p{
-  font-size:16.5px;
-  color:var(--charcoal-soft);
-  max-width:620px;
-}
 
-/* Category Filter Tabs */
-.gallery-filter-bar{
-  display:flex;
-  gap:10px;
-  margin:28px 0 36px;
-  flex-wrap:wrap;
-}
-.gallery-filter-btn{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.07em;
-  text-transform:uppercase;
-  background:var(--paper);
-  border:1px solid var(--line);
-  color:var(--navy);
-  padding:10px 22px;
-  border-radius:var(--radius);
-  cursor:pointer;
-  transition:all .2s ease;
-}
-.gallery-filter-btn:hover{
-  border-color:var(--copper);
-  color:var(--copper-deep);
-}
-.gallery-filter-btn.active{
-  background:var(--navy);
-  border-color:var(--navy);
-  color:var(--paper);
-}
-
-/* Showcase Grid Layout */
-.showcase-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:24px;
-  margin-bottom:80px;
-}
-.showcase-card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.showcase-card:hover{
-  transform:translateY(-4px);
-  border-color:var(--copper);
-  box-shadow:0 12px 28px rgba(19,34,77,.08);
-}
-.showcase-img-box{
-  position:relative;
-  width:100%;
-  aspect-ratio:4 / 3;
-  overflow:hidden;
-  background:var(--paper-dim);
-  cursor:pointer;
-}
-.showcase-img-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .4s ease;
-}
-.showcase-card:hover .showcase-img-box img{
-  transform:scale(1.06);
-}
-.showcase-badge{
-  position:absolute;
-  top:12px;
-  left:12px;
-  background:rgba(19,34,77,.88);
-  backdrop-filter:blur(4px);
-  color:var(--paper);
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  padding:4px 10px;
-  border-radius:var(--radius);
-}
-.showcase-body{
-  padding:22px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
-}
-.showcase-body h3{
-  font-size:19px;
-  color:var(--navy);
-  margin-bottom:6px;
-}
-.showcase-body p{
-  font-size:14px;
-  color:var(--charcoal-soft);
-  margin-bottom:16px;
-}
-.showcase-meta{
-  font-family:var(--mono);
-  font-size:11.5px;
-  color:var(--charcoal-soft);
-  border-top:1px solid var(--line);
-  padding-top:12px;
-  margin-top:auto;
-  display:flex;
-  justify-content:space-between;
-}
-.showcase-meta b{
-  color:var(--copper-deep);
-}
-
-/* Lightbox Modal */
-.lightbox-modal{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(11,23,48,.92);
-  backdrop-filter:blur(8px);
-  z-index:9999;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-}
-.lightbox-modal.active{
-  display:flex;
-}
-.lightbox-content{
-  position:relative;
-  max-width:900px;
-  max-height:85vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.lightbox-content img{
-  max-width:100%;
-  max-height:75vh;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,.15);
-}
-.lightbox-caption{
-  color:var(--paper);
-  font-family:var(--display);
-  font-size:18px;
-  margin-top:14px;
-}
-.lightbox-close{
-  position:absolute;
-  top:-40px;
-  right:0;
-  color:var(--paper);
-  font-size:32px;
-  cursor:pointer;
-  line-height:1;
-}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--navy-deep); color:#8C96B5; padding:56px 0 28px;}
@@ -373,589 +200,391 @@ footer{background:var(--navy-deep); color:#8C96B5; padding:56px 0 28px;}
   </div>
 </header>
 
-<!DOCTYPE html>
+<
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Quality & Compliance - JIEX International Trade</title>
-
-    <style>
-
-        /* =====================================================
-           RESET
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        body {
-            margin: 0;
-
-            background: #f7f3ec;
-
-            color: #102b59;
-
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-
-        /* =====================================================
-           QUALITY & COMPLIANCE SECTION
-        ===================================================== */
-
-        .quality-section {
-
-            width: 100%;
-
-            background: #f7f3ec;
-
-            padding: 70px 6.9% 75px;
-        }
-
-
-        /* =====================================================
-           MAIN CONTAINER
-        ===================================================== */
-
-        .quality-container {
-
-            width: 100%;
-
-            max-width: 1500px;
-
-            margin: 0 auto;
-        }
-
-
-        /* =====================================================
-           SECTION LABEL
-        ===================================================== */
-
-        .quality-label {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 14px;
-
-            margin-bottom: 27px;
-
-            color: #b76527;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 12px;
-
-            font-weight: 400;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-        }
-
-
-        /* ORANGE LINE */
-
-        .quality-label::before {
-
-            content: "";
-
-            width: 35px;
-
-            height: 2px;
-
-            background: #b76527;
-
-            display: block;
-
-            flex-shrink: 0;
-        }
-
-
-        /* =====================================================
-           MAIN HEADING
-        ===================================================== */
-
-        .quality-title {
-
-            margin: 0 0 24px 0;
-
-            color: #102b59;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 54px;
-
-            line-height: 1.08;
-
-            font-weight: 700;
-
-            letter-spacing: -1px;
-        }
-
-
-        /* =====================================================
-           DESCRIPTION
-        ===================================================== */
-
-        .quality-description {
-
-            max-width: 900px;
-
-            margin: 0 0 76px 0;
-
-            color: #4d4d4d;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 20px;
-
-            line-height: 1.7;
-
-            font-weight: 400;
-        }
-
-
-        /* =====================================================
-           CERTIFICATION GRID
-        ===================================================== */
-
-        .certification-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 24px;
-        }
-
-
-        /* =====================================================
-           CERTIFICATION CARD
-        ===================================================== */
-
-        .certification-card {
-
-            min-height: 232px;
-
-            border: 1px solid #ddd4c7;
-
-            background: transparent;
-
-            padding: 35px 25px 28px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            text-align: center;
-
-            justify-content: flex-start;
-        }
-
-
-        /* =====================================================
-           CIRCLE INITIAL
-        ===================================================== */
-
-        .certification-icon {
-
-            width: 59px;
-
-            height: 59px;
-
-            border: 2px solid #c8742b;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            color: #b76527;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 23px;
-
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           CERTIFICATION CARD TITLE
-        ===================================================== */
-
-        .certification-card h3 {
-
-            margin: 0 0 10px 0;
-
-            color: #102b59;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 19px;
-
-            line-height: 1.3;
-
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           CERTIFICATION CARD DESCRIPTION
-        ===================================================== */
-
-        .certification-card p {
-
-            max-width: 270px;
-
-            margin: 0;
-
-            color: #555555;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 16px;
-
-            line-height: 1.55;
-
-            font-weight: 400;
-        }
-
-
-
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
-        @media (max-width: 1100px) {
-
-            .quality-section {
-
-                padding: 65px 6% 70px;
-            }
-
-
-            .quality-title {
-
-                font-size: 46px;
-            }
-
-
-            .quality-description {
-
-                font-size: 18px;
-
-                margin-bottom: 60px;
-            }
-
-
-            .certification-grid {
-
-                grid-template-columns: repeat(2, 1fr);
-
-                gap: 20px;
-            }
-
-        }
-
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 650px) {
-
-            .quality-section {
-
-                padding: 55px 7% 60px;
-            }
-
-
-            .quality-label {
-
-                font-size: 10px;
-
-                letter-spacing: 2px;
-
-                gap: 9px;
-
-                margin-bottom: 20px;
-            }
-
-
-            .quality-label::before {
-
-                width: 28px;
-
-                height: 1px;
-            }
-
-
-            .quality-title {
-
-                font-size: 36px;
-
-                line-height: 1.08;
-
-                letter-spacing: -0.5px;
-
-                margin-bottom: 20px;
-            }
-
-
-            .quality-description {
-
-                font-size: 16px;
-
-                line-height: 1.6;
-
-                margin-bottom: 45px;
-            }
-
-
-            .certification-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 18px;
-            }
-
-
-            .certification-card {
-
-                min-height: 220px;
-
-                padding: 32px 22px 28px;
-            }
-
-
-            .certification-icon {
-
-                width: 55px;
-
-                height: 55px;
-
-                font-size: 21px;
-
-                margin-bottom: 18px;
-            }
-
-
-            .certification-card h3 {
-
-                font-size: 18px;
-            }
-
-
-            .certification-card p {
-
-                font-size: 15px;
-            }
-
-        }
-
-
-
-        /* =====================================================
-           SMALL MOBILE
-        ===================================================== */
-
-        @media (max-width: 400px) {
-
-            .quality-title {
-
-                font-size: 31px;
-            }
-
-
-            .quality-description {
-
-                font-size: 15px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quality & Compliance - JIEX International Trade</title>
+<style>
+/* ===================================================== */
+/* RESET */
+/* ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    background: #f7f3ec;
+    color: #102b59;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+/* ===================================================== */
+/* QUALITY & COMPLIANCE SECTION */
+/* ===================================================== */
+.quality-section {
+    width: 100%;
+    background: radial-gradient(circle at 88% -10%, #f2e2c8 0%, #f7f3ec 45%);
+    padding: 70px 6.9% 75px;
+    overflow: hidden;
+}
+ 
+.quality-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+ 
+/* ===================================================== */
+/* SECTION LABEL */
+/* ===================================================== */
+.quality-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 27px;
+    color: #b76527;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+ 
+.quality-label::before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: #b76527;
+    display: block;
+    flex-shrink: 0;
+}
+ 
+/* ===================================================== */
+/* MAIN HEADING */
+/* ===================================================== */
+.quality-title {
+    margin: 0 0 24px 0;
+    color: #102b59;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 54px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+ 
+.quality-title span.accent {
+    color: #b76527;
+}
+ 
+/* ===================================================== */
+/* DESCRIPTION */
+/* ===================================================== */
+.quality-description {
+    max-width: 900px;
+    margin: 0 0 40px 0;
+    color: #4d4d4d;
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+ 
+/* ===================================================== */
+/* TRUST STRIP - new row of quick stats above the cards  */
+/* ===================================================== */
+.trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    margin-bottom: 50px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e2d6c0;
+}
+ 
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.trust-item .num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #b76527;
+}
+ 
+.trust-item .label {
+    font-size: 13px;
+    color: #4d4d4d;
+    letter-spacing: 0.3px;
+    max-width: 120px;
+    line-height: 1.3;
+}
+ 
+/* ===================================================== */
+/* CERTIFICATION GRID */
+/* ===================================================== */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+ 
+/* ===================================================== */
+/* CERTIFICATION CARD - with entrance animation           */
+/* ===================================================== */
+.certification-card {
+    position: relative;
+    min-height: 232px;
+    border: 1px solid #ddd4c7;
+    border-top: 4px solid #c8742b;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(16, 43, 89, 0.06);
+    padding: 35px 25px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+ 
+    opacity: 0;
+    transform: translateY(24px);
+    animation: cardIn .6s ease forwards;
+}
+ 
+.certification-card:nth-child(1) { animation-delay: .05s; }
+.certification-card:nth-child(2) { animation-delay: .20s; }
+.certification-card:nth-child(3) { animation-delay: .35s; }
+.certification-card:nth-child(4) { animation-delay: .50s; }
+.certification-card:nth-child(5) { animation-delay: .65s; }
+ 
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.certification-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 36px rgba(16, 43, 89, 0.18);
+    border-color: #c8742b;
+}
+ 
+/* ===================================================== */
+/* CIRCLE INITIAL (badge icon) + verified check mark      */
+/* ===================================================== */
+.certification-icon {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border: 2px solid #c8742b;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fdf1e0, #f6dcb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    color: #b76527;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 700;
+    transition: background .3s ease, color .3s ease, transform .3s ease;
+}
+ 
+.certification-card:hover .certification-icon {
+    background: #b76527;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+ 
+/* the little check-mark badge sitting on the corner */
+.icon-check {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    background: #2f7d4f;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.icon-check svg {
+    width: 11px;
+    height: 11px;
+}
+ 
+/* ===================================================== */
+/* CERTIFICATION CARD TEXT */
+/* ===================================================== */
+.certification-card h3 {
+    margin: 0 0 10px 0;
+    color: #102b59;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+ 
+.certification-card p {
+    max-width: 270px;
+    margin: 0;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+ 
+/* ===================================================== */
+/* TABLET */
+/* ===================================================== */
+@media (max-width: 1100px) {
+    .quality-section { padding: 65px 6% 70px; }
+    .quality-title { font-size: 46px; }
+    .quality-description { font-size: 18px; }
+    .certification-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .trust-strip { gap: 26px; }
+}
+ 
+/* ===================================================== */
+/* MOBILE */
+/* ===================================================== */
+@media (max-width: 650px) {
+    .quality-section { padding: 55px 7% 60px; }
+    .quality-label { font-size: 10px; letter-spacing: 2px; gap: 9px; margin-bottom: 20px; }
+    .quality-label::before { width: 28px; height: 1px; }
+    .quality-title { font-size: 36px; letter-spacing: -0.5px; margin-bottom: 20px; }
+    .quality-description { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+    .trust-strip { gap: 20px; margin-bottom: 35px; padding-bottom: 25px; }
+    .trust-item .num { font-size: 22px; }
+    .trust-item .label { font-size: 12px; }
+    .certification-grid { grid-template-columns: 1fr; gap: 18px; }
+    .certification-card { min-height: 220px; padding: 32px 22px 28px; }
+    .certification-icon { width: 55px; height: 55px; font-size: 21px; margin-bottom: 18px; }
+    .certification-card h3 { font-size: 18px; }
+    .certification-card p { font-size: 15px; }
+}
+ 
+@media (max-width: 400px) {
+    .quality-title { font-size: 31px; }
+    .quality-description { font-size: 15px; }
+}
+ 
+</style>
 </head>
-
-
 <body>
-
-
-    <!-- =====================================================
-         QUALITY & COMPLIANCE
-    ===================================================== -->
-
-    <section class="quality-section">
-
-        <div class="quality-container">
-
-
-            <!-- SECTION LABEL -->
-
-            <div class="quality-label">
-                Quality & Compliance
-            </div>
-
-
-
-            <!-- MAIN HEADING -->
-
-            <h1 class="quality-title">
-                Certified at every checkpoint.
-            </h1>
-
-
-
-            <!-- DESCRIPTION -->
-
-            <p class="quality-description">
-                From farm gate to port, each consignment carries the
-                documentation your customs and quality teams need.
-            </p>
-
-
-
-            <!-- =================================================
-                 CERTIFICATION CARDS
-            ================================================= -->
-
-            <div class="certification-grid">
-
-
-                <!-- CARD 1 -->
-
-                <div class="certification-card">
-
-                    <div class="certification-icon">
-                        A
-                    </div>
-
-                    <h3>
-                        APEDA Registered
-                    </h3>
-
-                    <p>
-                        Export council recognition for agri produce
-                    </p>
-
-                </div>
-
-
-
-                <!-- CARD 2 -->
-
-                <div class="certification-card">
-
-                    <div class="certification-icon">
-                        P
-                    </div>
-
-                    <h3>
-                        Phytosanitary Cert.
-                    </h3>
-
-                    <p>
-                        Issued per shipment by [Plant Quarantine Dept.]
-                    </p>
-
-                </div>
-
-
-
-                <!-- CARD 3 -->
-
-                <div class="certification-card">
-
-                    <div class="certification-icon">
-                        I
-                    </div>
-
-                    <h3>
-                        ISO [9001:2015]
-                    </h3>
-
-                    <p>
-                        Quality management at grading &amp; packing units
-                    </p>
-
-                </div>
-
-
-
-                <!-- CARD 4 -->
-
-                <div class="certification-card">
-
-                    <div class="certification-icon">
-                        F
-                    </div>
-
-                    <h3>
-                        FSSAI Licensed
-                    </h3>
-
-                    <p>
-                        Food safety compliance, Lic. No.
-                        [XXXXXXXXXXXXXXX]
-                    </p>
-
-                </div>
-
-
-
-                <!-- CARD 5 -->
-
-                <div class="certification-card">
-
-                    <div class="certification-icon">
-                        F
-                    </div>
-
-                    <h3>
-                        UDYAM Cert.
-                    </h3>
-
-                    <p>
-                        MSME, UDYAM REG.NO. UDYAM-MH-05-0133628
-                    </p>
-
-                </div>
-
-
-            </div>
-
+ 
+<section class="quality-section">
+    <div class="quality-container">
+ 
+        <div class="quality-label">
+            Quality & Compliance
         </div>
+ 
+        <h1 class="quality-title">
+            <span class="accent">Certified</span> at every checkpoint.
+        </h1>
+ 
+        <p class="quality-description">
+            From farm gate to port, each consignment carries the
+            documentation your customs and quality teams need.
+        </p>
+ 
+        <!-- TRUST STRIP -->
+        <div class="trust-strip">
+            <div class="trust-item">
+                <div class="num">5+</div>
+                <div class="label">Active Certifications</div>
+            </div>
+            <div class="trust-item">
+                <div class="num">100%</div>
+                <div class="label">Shipments Documented</div>
+            </div>
+            <div class="trust-item">
+                <div class="num">0</div>
+                <div class="label">Compliance Delays</div>
+            </div>
+        </div>
+ 
+        <!-- CERTIFICATION CARDS -->
+        <div class="certification-grid">
+ 
+            <div class="certification-card">
+                <div class="certification-icon">
+                    A
+                    <span class="icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                </div>
+                <h3>APEDA Registered</h3>
+                <p>Export council recognition for agri produce</p>
+            </div>
+ 
+            <div class="certification-card">
+                <div class="certification-icon">
+                    P
+                    <span class="icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                </div>
+                <h3>Phytosanitary Cert.</h3>
+                <p>Issued per shipment by [Plant Quarantine Dept.]</p>
+            </div>
+ 
+            <div class="certification-card">
+                <div class="certification-icon">
+                    I
+                    <span class="icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                </div>
+                <h3>ISO [9001:2015]</h3>
+                <p>Quality management at grading &amp; packing units</p>
+            </div>
+ 
+            <div class="certification-card">
+                <div class="certification-icon">
+                    F
+                    <span class="icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                </div>
+                <h3>FSSAI Licensed</h3>
+                <p>Food safety compliance, Lic. No. [XXXXXXXXXXXXXXX]</p>
+            </div>
+ 
+            <div class="certification-card">
+                <div class="certification-icon">
+                    U
+                    <span class="icon-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                </div>
+                <h3>UDYAM Cert.</h3>
+                <p>MSME, UDYAM REG.NO. UDYAM-MH-05-0133628</p>
+            </div>
+ 
+        </div>
+ 
+    </div>
+</section>
+ 
+</body> 
 
-    </section>
 
 
-</body>
-</html>
-<!-- LIGHTBOX MODAL POPUP -->
-<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-  <div class="lightbox-content" onclick="event.stopPropagation()">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightboxImg" src="" alt="Enlarged Preview">
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1276,4 +905,3 @@ footer{background:var(--navy-deep); color:#8C96B5; padding:56px 0 28px;}
  
  
  
-
