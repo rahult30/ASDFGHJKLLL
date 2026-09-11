@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
         <loc>https://www.jiexinternationaltrade.com/</loc>
-        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jiexinternationaltrade.com/index.html#about</loc>
+    </url>
+      <url>
+        <loc>https://www.jiexinternationaltrade.com/product.html</loc>
+    </url>
+ <url>
+        <loc>https://www.jiexinternationaltrade.com/quality.html</loc>
+    </url>
+       <url>
+        <loc>https://www.jiexinternationaltrade.com/process.html</loc>
+    </url>
+       <url>
+        <loc>https://www.jiexinternationaltrade.com/Reach.html</loc>
+    </url>
+     <url>
+        <loc>https://www.jiexinternationaltrade.com/CONTACT.HTML</loc>
+    </url>
+     <url>
+        <loc>https://www.jiexinternationaltrade.com/Gallery.html</loc>
+    </url>
+    <url>
+        <loc>https://www.jiexinternationaltrade.com/Profile.html</loc>
     </url>
 
 </urlset>
