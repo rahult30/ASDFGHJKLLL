@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-<title>Product Gallery — JIEX International Trade</title>
+<title>Company Profile — JIEX International Trade</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -277,6 +277,620 @@ main {
     background-color: var(--paper-dim);
   }
 }
+
+
+/* Profile main content styles from Profile(1).html */
+.profile-section{
+      position:relative;
+      padding:88px 0 108px;
+      overflow:hidden;
+    }
+
+    .profile-section .wrap{
+      max-width:1060px;
+      position:relative;
+      z-index:1;
+    }
+
+    .profile-section::before{
+      content:"";
+      position:absolute;
+      width:430px;
+      height:430px;
+      right:-250px;
+      top:90px;
+      border:1px solid rgba(193,122,61,.12);
+      border-radius:50%;
+      box-shadow:
+        0 0 0 70px rgba(193,122,61,.025),
+        0 0 0 140px rgba(193,122,61,.018);
+      pointer-events:none;
+    }
+
+    .profile-section::after{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      left:-170px;
+      bottom:20px;
+      border:1px solid rgba(19,34,77,.08);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .profile-head{
+      max-width:780px;
+      margin:0 auto 38px;
+      text-align:center;
+      position:relative;
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:center;
+      margin-bottom:14px;
+      color:var(--copper-deep);
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:24px;
+      height:1px;
+      background:var(--copper);
+    }
+
+    .profile-head h1{
+      font-size:clamp(31px,4.2vw,46px);
+      line-height:1.1;
+      letter-spacing:-.025em;
+      margin:0 0 14px;
+    }
+
+    .profile-head h1::after{
+      content:"";
+      display:block;
+      width:58px;
+      height:2px;
+      margin:19px auto 0;
+      background:linear-gradient(90deg,transparent,var(--copper),transparent);
+    }
+
+    .profile-head p{
+      max-width:650px;
+      margin:0 auto;
+      color:var(--charcoal-soft);
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    /* =========================================================
+       SNAPSHOT
+       ========================================================= */
+
+    .profile-metrics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-bottom:22px;
+    }
+
+    .profile-metric{
+      position:relative;
+      padding:19px 21px;
+      background:rgba(243,237,225,.76);
+      border:1px solid var(--line);
+      overflow:hidden;
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .profile-metric::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:3px;
+      height:100%;
+      background:var(--copper);
+      transform:scaleY(.3);
+      transform-origin:center;
+      transition:transform .25s ease;
+    }
+
+    .profile-metric:hover{
+      transform:translateY(-3px);
+      border-color:rgba(193,122,61,.38);
+      box-shadow:0 12px 30px rgba(19,34,77,.065);
+    }
+
+    .profile-metric:hover::before{
+      transform:scaleY(1);
+    }
+
+    .profile-metric span{
+      display:block;
+      margin-bottom:7px;
+      color:var(--charcoal-soft);
+      font-family:var(--mono);
+      font-size:9.5px;
+      font-weight:600;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    .profile-metric strong{
+      display:block;
+      color:var(--navy);
+      font-family:var(--display);
+      font-size:18px;
+      font-weight:600;
+    }
+
+    /* =========================================================
+       PROFILE CARD
+       ========================================================= */
+
+    .profile-card{
+      position:relative;
+      overflow:hidden;
+      background:rgba(251,247,240,.88);
+      border:1px solid var(--line);
+      border-radius:4px;
+      box-shadow:
+        0 20px 55px rgba(19,34,77,.075),
+        0 2px 8px rgba(36,31,27,.035);
+    }
+
+    .profile-card::before{
+      content:"";
+      display:block;
+      height:3px;
+      background:linear-gradient(90deg,var(--navy),var(--copper),var(--navy));
+      background-size:200% 100%;
+      animation:profileAccent 7s ease-in-out infinite;
+    }
+
+    @keyframes profileAccent{
+      0%,100%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+    }
+
+    .profile-card-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:15px 24px;
+      background:var(--paper-dim);
+      border-bottom:1px solid var(--line);
+    }
+
+    .profile-card-head span{
+      color:var(--charcoal-soft);
+      font-family:var(--mono);
+      font-size:9.5px;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .profile-card-head span:last-child{
+      color:var(--copper-deep);
+    }
+
+    .spec-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+
+    .spec-table tr{
+      border-bottom:1px solid var(--line);
+      transition:background-color .25s ease;
+    }
+
+    .spec-table tr:last-child{
+      border-bottom:0;
+    }
+
+    .spec-table tr:hover{
+      background:rgba(255,255,255,.68);
+    }
+
+    .spec-table th{
+      position:relative;
+      width:34%;
+      padding:19px 24px 19px 30px;
+      background:var(--paper-dim);
+      color:var(--charcoal-soft);
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.11em;
+      line-height:1.5;
+      text-align:left;
+      text-transform:uppercase;
+      vertical-align:middle;
+    }
+
+    .spec-table th::before{
+      content:"";
+      position:absolute;
+      left:13px;
+      top:50%;
+      width:4px;
+      height:4px;
+      border-radius:50%;
+      background:var(--copper);
+      transform:translateY(-50%) scale(.7);
+      opacity:.55;
+      transition:transform .25s ease,opacity .25s ease;
+    }
+
+    .spec-table th::after{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:3px;
+      background:var(--copper);
+      transform:scaleY(0);
+      transform-origin:center;
+      transition:transform .25s ease;
+    }
+
+    .spec-table tr:hover th::before{
+      transform:translateY(-50%) scale(1.4);
+      opacity:1;
+    }
+
+    .spec-table tr:hover th::after{
+      transform:scaleY(1);
+    }
+
+    .spec-table td{
+      padding:19px 28px;
+      color:var(--charcoal);
+      line-height:1.65;
+      vertical-align:middle;
+    }
+
+    .spec-table td a{
+      color:var(--copper-deep);
+      border-bottom:1px solid rgba(158,95,40,.28);
+      transition:color .2s ease,border-color .2s ease;
+    }
+
+    .spec-table td a:hover{
+      color:var(--navy);
+      border-color:var(--navy);
+    }
+
+    .status-text{
+      color:var(--charcoal-soft);
+      font-style:italic;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer{
+      position:relative;
+      background:var(--navy-deep);
+      color:rgba(251,247,240,.78);
+      padding:64px 0 22px;
+      overflow:hidden;
+    }
+
+    footer::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(193,122,61,.7),transparent);
+    }
+
+    footer::after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      right:-230px;
+      bottom:-220px;
+      border:1px solid rgba(193,122,61,.08);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.6fr 1fr 1fr 1.2fr;
+      gap:38px;
+      padding-bottom:42px;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-brand .nav-logo img{
+      height:40px;
+      width:auto;
+      margin-bottom:18px;
+    }
+
+    .footer-brand p{
+      max-width:330px;
+      color:rgba(251,247,240,.62);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer-col h5{
+      margin-bottom:16px;
+      color:var(--paper);
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .footer-col ul{
+      list-style:none;
+      display:grid;
+      gap:9px;
+    }
+
+    .footer-col li,
+    .footer-col a{
+      color:rgba(251,247,240,.62);
+      font-size:13px;
+      line-height:1.5;
+      transition:color .2s ease;
+    }
+
+    .footer-col a:hover{
+      color:var(--paper);
+    }
+
+    .footer-contact a{
+      color:rgba(251,247,240,.68);
+    }
+
+   
+    .footer-bottom{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding-top:20px;
+      color:rgba(251,247,240,.45);
+      font-family:var(--mono);
+      font-size:9.5px;
+      letter-spacing:.03em;
+    }
+
+    .legal-links{
+      display:flex;
+      gap:20px;
+    }
+
+    .legal-links a:hover{
+      color:var(--paper);
+    }
+
+    /* =========================================================
+       REVEAL EFFECT
+       ========================================================= */
+
+    .profile-reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .profile-reveal.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media(max-width:1050px){
+      .nav-links{
+        gap:18px;
+      }
+
+      .nav-cta{
+        padding-left:13px;
+        padding-right:13px;
+      }
+    }
+
+    @media(max-width:900px){
+      .nav-links{
+        display:none;
+      }
+
+      .mobile-menu-btn{
+        display:flex;
+      }
+
+      .nav-right{
+        margin-left:auto;
+        margin-right:10px;
+      }
+
+      .nav-links.mobile-open{
+        display:flex;
+        position:absolute;
+        left:0;
+        right:0;
+        top:72px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:8px 32px 18px;
+        background:rgba(251,247,240,.98);
+        border-bottom:1px solid var(--line);
+        box-shadow:0 14px 30px rgba(19,34,77,.08);
+      }
+
+      .nav-links.mobile-open a{
+        padding:13px 0;
+        border-bottom:1px solid rgba(228,218,203,.65);
+      }
+
+      .nav-links.mobile-open a:last-child{
+        border-bottom:0;
+      }
+
+      .nav-links.mobile-open a::after{
+        display:none;
+      }
+
+      .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:700px){
+      .wrap{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .nav-inner{
+        padding:11px 20px;
+        min-height:66px;
+      }
+
+      .nav-logo img{
+        height:34px;
+        max-width:175px;
+      }
+
+      .nav-right{
+        display:none;
+      }
+
+      .nav-links.mobile-open{
+        top:66px;
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .profile-section{
+        padding:60px 0 76px;
+      }
+
+      .profile-head{
+        text-align:left;
+        margin-bottom:30px;
+      }
+
+      .profile-head .eyebrow{
+        justify-content:flex-start;
+      }
+
+      .profile-head h1{
+        font-size:32px;
+      }
+
+      .profile-head h1::after{
+        margin-left:0;
+      }
+
+      .profile-head p{
+        font-size:14px;
+      }
+
+      .profile-metrics{
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .profile-card-head{
+        padding:14px 17px;
+      }
+
+      .profile-card-head span:last-child{
+        display:none;
+      }
+
+      .spec-table,
+      .spec-table tbody,
+      .spec-table tr,
+      .spec-table th,
+      .spec-table td{
+        display:block;
+        width:100%;
+      }
+
+      .spec-table tr{
+        border-bottom:1px solid var(--line);
+      }
+
+      .spec-table th{
+        padding:15px 18px 6px 23px;
+      }
+
+      .spec-table th::before{
+        left:10px;
+        top:22px;
+      }
+
+      .spec-table td{
+        padding:4px 18px 17px 23px;
+        background:var(--paper-dim);
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+      }
+
+      .profile-reveal{
+        opacity:1;
+        transform:none;
+      }
+    }
+  
 </style>
 </head>
 <body>
@@ -317,38 +931,198 @@ main {
   </div>
 </header>
 <main>
-  <section id="Profile">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">COMPANY PROFILE</div>
-        <h2>JIEX International Trade — at a glance.</h2>
-        <p>Key business details for buyers, banks, and verification purposes.</p>
+
+    <section class="profile-section">
+
+      <div class="wrap">
+
+        <!-- PROFILE HEADING -->
+        <div class="profile-head profile-reveal">
+
+          <div class="eyebrow">
+            Company Profile
+          </div>
+
+          <h1>
+            JIEX International Trade — at a glance.
+          </h1>
+
+          <p>
+            Key business details for buyers, banks, and verification purposes.
+          </p>
+
+        </div>
+
+
+        <!-- BUSINESS SNAPSHOT -->
+        <div class="profile-metrics profile-reveal">
+
+          <div class="profile-metric">
+            <span>Business Type</span>
+            <strong>Merchant Exporter</strong>
+          </div>
+
+          <div class="profile-metric">
+            <span>Export Focus</span>
+            <strong>100%</strong>
+          </div>
+
+          <div class="profile-metric">
+            <span>Delivery Terms</span>
+            <strong>FOB / CIF / CFR</strong>
+          </div>
+
+        </div>
+
+
+        <!-- COMPANY INFORMATION -->
+        <div class="profile-card profile-reveal">
+
+          <div class="profile-card-head">
+            <span>Business Information</span>
+            <span>JIEX / PROFILE</span>
+          </div>
+
+
+          <table class="spec-table">
+
+            <tbody>
+
+              <tr>
+                <th scope="row">Nature of Business</th>
+                <td>Export &amp; Import Trading</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Proprietor</th>
+                <td>Rahul Tekale</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Registered Address</th>
+                <td>Ambajogai, Maharashtra, India - 431517</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Contact No.</th>
+                <td>
+                  <a href="tel:+918275338822">
+                    +91-8275338822
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Business Email ID</th>
+                <td>
+                  <a href="mailto:info@jiexinternationaltrade.com">
+                    info@jiexinternationaltrade.com
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Website</th>
+                <td>
+                  <a
+                    href="https://www.jiexinternationaltrade.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    www.jiexinternationaltrade.com
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Business Type</th>
+                <td>Merchant Exporter</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Year of Establishment</th>
+                <td>2026</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Importer Exporter Code (IEC)</th>
+                <td>
+                  <span class="status-text">[updating in process]</span>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">GST Registration Number</th>
+                <td>
+                  <span class="status-text">[updating in process]</span>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Export Percentage</th>
+                <td>100%</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Product Samples</th>
+                <td>
+                  Available on request. Freight charges to be borne by buyer.
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Supply Potential &amp; Capability</th>
+                <td>
+                  As per order quantity and size
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Payment Terms</th>
+                <td>
+                  Advance Payment, D/P 50%, L/C at Sight, T/T
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Accepted Delivery Terms</th>
+                <td>
+                  FOB / CIF / CFR
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Accepted Payment Currency</th>
+                <td>
+                  USD $, EURO €, GBP £, YEN ¥
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Legal Status of Firm</th>
+                <td>
+                  Sole Proprietorship
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Statutory Credentials</th>
+                <td>
+                  APEDA, UDYAM (MSME), FSSAI, IEC, RCMC
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
       </div>
-      <table class="spec-table">
-        <tbody>
-          <tr><th>Nature of Business</th><td>Export &amp; Import Trading</td></tr>
-          <tr><th>Proprietor</th><td>Rahul Tekale</td></tr>
-          <tr><th>Registered Address</th><td>Ambajogai,Maharashtra,India-431517 </td></tr>
-          <tr><th>Contact No.</th><td>+91-8275338822</td></tr>
-          <tr><th>Business Email ID</th><td>info@jiexinternationaltrade.com</td></tr>
-          <tr><th>Website</th><td>www.jiexinternationaltrade.com</td></tr>
-          <tr><th>Business Type</th><td>Merchant Exporter</td></tr>
-          <tr><th>Year of Establishment</th><td>2026</td></tr>
-          <tr><th>Importer Exporter Code (IEC)</th><td>[updating in process]</td></tr>
-          <tr><th>GST Registration Number</th><td>[updating in process]</td></tr>
-          <tr><th>Export Percentage</th><td>100%</td></tr>
-          <tr><th>Product Samples</th><td>Available on request. Freight charges to be borne by buyer.</td></tr>
-          <tr><th>Supply Potential &amp; Capability</th><td>As per order quantity and size</td></tr>
-          <tr><th>Payment Terms</th><td>Advance Payment, D/P 50%, L/C at Sight, T/T</td></tr>
-          <tr><th>Accepted Delivery Terms</th><td>FOB / CIF / CFR</td></tr>
-          <tr><th>Accepted Payment Currency</th><td>USD $, EURO €, GBP £, YEN ¥</td></tr>
-          <tr><th>Legal Status of Firm</th><td>Sole Proprietorship</td></tr>
-          <tr><th>Statutory Credentials</th><td>APEDA, UDYAM (MSME), FSSAI, IEC, RCMC</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-</main>
+
+    </section>
+
+  </main>
 
 <!-- FOOTER -->
 <footer>
@@ -661,6 +1435,26 @@ main {
   }
   setInterval(suppressGoogleBar, 300);
   window.addEventListener('load', suppressGoogleBar);
+})();
+</script>
+
+
+<script>
+(function(){
+  const revealElements = document.querySelectorAll(".profile-reveal");
+  if ("IntersectionObserver" in window &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const revealObserver = new IntersectionObserver(function(entries, observer){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {threshold:0.08, rootMargin:"0px 0px -40px"});
+    revealElements.forEach(function(element){ revealObserver.observe(element); });
+  } else {
+    revealElements.forEach(function(element){ element.classList.add("is-visible"); });
+  }
 })();
 </script>
 
