@@ -1263,6 +1263,131 @@ footer img{
 }
 </style>
 
+
+<style id="jiex-index-header-match">
+/* =========================================================
+   REACH HEADER — EXACTLY MATCH INDEX HEADER
+   Source reference: INDEX(1).txt
+   ========================================================= */
+
+header.site-nav{
+  position:sticky !important;
+  top:0 !important;
+  z-index:100 !important;
+  background:rgba(251,247,240,.92) !important;
+  backdrop-filter:blur(8px) !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+.site-nav .nav-inner{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  padding:16px 32px !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  gap:20px !important;
+}
+
+.site-nav .nav-logo{
+  flex-shrink:0 !important;
+}
+
+.site-nav .nav-logo img{
+  height:34px !important;
+  max-height:34px !important;
+  width:auto !important;
+  object-fit:contain !important;
+}
+
+.site-nav .nav-links{
+  display:flex !important;
+  gap:34px !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+  flex:1 !important;
+  justify-content:center !important;
+  align-items:initial !important;
+  font-family:var(--body) !important;
+}
+
+.site-nav .nav-links a,
+.site-nav .nav-links a:visited,
+.site-nav .nav-links a:active,
+.site-nav .nav-links a:focus{
+  position:relative !important;
+  padding-bottom:4px !important;
+  color:var(--charcoal) !important;
+  font-family:var(--body) !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+  text-decoration:none !important;
+  transition:none !important;
+}
+
+.site-nav .nav-links a:hover{
+  color:var(--charcoal) !important;
+  text-decoration:none !important;
+}
+
+.site-nav .nav-links a::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:0 !important;
+  width:0 !important;
+  height:1.5px !important;
+  background:var(--copper) !important;
+  transition:width .2s ease !important;
+}
+
+.site-nav .nav-links a:hover::after,
+.site-nav .nav-links a.active-link::after{
+  width:100% !important;
+}
+
+.site-nav .nav-cta{
+  font-family:var(--mono) !important;
+  font-size:12px !important;
+  letter-spacing:0.06em !important;
+  text-transform:uppercase !important;
+  background:var(--navy) !important;
+  color:var(--paper) !important;
+  padding:11px 20px !important;
+  border-radius:var(--radius) !important;
+  white-space:nowrap !important;
+}
+
+.site-nav .nav-right{
+  display:flex !important;
+  align-items:center !important;
+  gap:16px !important;
+  flex-shrink:0 !important;
+}
+
+@media (max-width:900px){
+  .site-nav .nav-links{
+    display:none !important;
+  }
+  .site-nav .nav-inner{
+    gap:12px !important;
+  }
+  .site-nav .nav-right{
+    gap:10px !important;
+  }
+  .site-nav .lang-btn{
+    padding:8px 10px !important;
+  }
+  .site-nav .lang-btn span.lang-btn-text{
+    display:none !important;
+  }
+  .site-nav .lang-panel{
+    width:230px !important;
+    right:-8px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="google_translate_element"></div>
