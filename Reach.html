@@ -1186,6 +1186,83 @@ footer img{
 }
 </style>
 
+
+<style id="jiex-nav-color-fix">
+/* Keep navigation text color identical to the main Index header */
+.nav-links a,
+.nav-links a:visited,
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a:focus {
+  color: var(--navy) !important;
+  text-decoration: none !important;
+}
+</style>
+
+<style id="jiex-final-header-fix">
+/* =========================================================
+   JIEX HEADER — MATCH INDEX.HTML EXACTLY
+   Prevent Reach-specific styles from changing nav appearance.
+   ========================================================= */
+.site-nav {
+  font-family: var(--body) !important;
+  background: rgba(251,247,240,.96) !important;
+  color: var(--charcoal) !important;
+}
+.site-nav .nav-inner {
+  min-height: 72px !important;
+  padding: 12px 32px !important;
+  max-width: 1180px !important;
+}
+.site-nav .nav-logo img {
+  height: 38px !important;
+  max-height: 38px !important;
+  width: auto !important;
+}
+.site-nav .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 27px !important;
+  font-family: var(--body) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+}
+.site-nav .nav-links a,
+.site-nav .nav-links a:visited,
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:active,
+.site-nav .nav-links a:focus {
+  color: var(--charcoal) !important;
+  font-family: var(--body) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a.active-link {
+  color: var(--navy) !important;
+}
+.site-nav .nav-links a::after {
+  background: var(--copper) !important;
+}
+.site-nav .nav-cta {
+  font-family: var(--mono) !important;
+  background: var(--navy) !important;
+  color: var(--paper) !important;
+}
+.site-nav .mobile-menu-btn {
+  font-family: var(--body) !important;
+}
+@media (max-width:900px) {
+  .site-nav .nav-links { display:none !important; }
+  .site-nav .nav-links.mobile-open {
+    display:flex !important;
+    font-family: var(--body) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="google_translate_element"></div>
