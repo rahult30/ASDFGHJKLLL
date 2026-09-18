@@ -251,6 +251,40 @@ footer{background:var(--navy-deep); color:#8C96B5; padding:56px 0 28px;}
   html{scroll-behavior:auto;}
   *{transition:none !important;}
 }
+
+/* ---------- FOOTER ALIGNMENT FIX ---------- */
+footer > .wrap{
+  width:calc(100% - 64px);
+  max-width:1680px;
+  margin:0 auto;
+  padding-left:0;
+  padding-right:0;
+  box-sizing:border-box;
+}
+
+footer .footer-bottom{
+  width:min(1680px, calc(100vw - 64px));
+  max-width:1680px;
+  margin:24px auto 0;
+  padding-top:0;
+  box-sizing:border-box;
+}
+
+/* Keep the copyright and legal links on the same left/right grid as the footer above. */
+footer .footer-bottom > div:first-child{
+  flex:0 1 auto;
+}
+footer .footer-bottom .legal-links{
+  margin-left:auto;
+  flex:0 0 auto;
+}
+
+@media (max-width: 600px){
+  footer > .wrap{
+    width:calc(100% - 40px);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -393,7 +427,7 @@ Backed by strong relationships with local farmers, JIEX International Trade is c
           <li><a href="process.html">Process</a></li>
           <li><a href="Gallery.html">Gallery</a></li>
           <li><a href="Profile.html">Profile</a></li>
-          </li><a href="FAQ.html" >FAQ</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
