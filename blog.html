@@ -360,36 +360,21 @@ main {
 
 .featured-image {
   position: relative;
-  min-height: 470px;
+  min-height: 0;
+  height: 100%;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 25% 25%, rgba(193, 122, 61, .28), transparent 25%),
-    linear-gradient(145deg, #0B1730, #283E76);
+  background: #E9E1D5;
 }
 
-.featured-image::before {
-  content: "RED";
+.featured-image img {
   position: absolute;
-  left: -12px;
-  bottom: -45px;
-  color: rgba(255, 255, 255, .055);
-  font-family: "Fraunces", serif;
-  font-size: 175px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.featured-image::after {
-  content: "ONION";
-  position: absolute;
-  top: 40px;
-  right: -20px;
-  color: rgba(255, 255, 255, .045);
-  font-family: "Fraunces", serif;
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 1;
-  transform: rotate(90deg);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .featured-label {
@@ -899,6 +884,13 @@ a:focus-visible {
   }
 }
 
+/* FEATURE IMAGE — FINAL CLEANUP */
+.featured-image::before,
+.featured-image::after {
+  content: none !important;
+  display: none !important;
+}
+
 /* RESPONSIVE — TABLET */
 @media (max-width: 900px) {
   .featured {
@@ -906,7 +898,7 @@ a:focus-visible {
   }
 
   .featured-image {
-    min-height: 330px;
+    height: 420px;
   }
 
   .article-grid {
@@ -969,6 +961,10 @@ a:focus-visible {
 
   main {
     padding: 60px 18px 70px;
+  }
+
+  .featured-image {
+    height: 300px;
   }
 
   .featured-content {
@@ -1178,9 +1174,13 @@ a:focus-visible {
 
 
       <div class="featured-image">
-           <img 
-      src="red_onion_main_blog.jpg"
-    >
+
+        <img
+          src="red_onion_main_blog.jpg"
+          alt="Fresh red onions prepared for export from Maharashtra, India"
+          loading="eager"
+          decoding="async"
+        >
 
         <span class="featured-label">
           Featured · Onion Export
@@ -1348,8 +1348,11 @@ a:focus-visible {
 
   <div class="card-image">
 
-    <img 
+    <img
       src="red_onion_blog.jpg"
+      alt="Fresh Indian red onions for export"
+      loading="lazy"
+      decoding="async"
     >
 
     <span class="card-tag">
